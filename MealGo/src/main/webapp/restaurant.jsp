@@ -15,6 +15,8 @@
 <link
 	href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap"
 	rel="stylesheet" />
+	
+<link rel="icon" href="images/logo.jpg" sizes="32x32" />
 </head>
 
 <body>

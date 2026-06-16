@@ -12,6 +12,7 @@
 <title>MealGo | Menu</title>
 
 <link rel="stylesheet" href="menu.css" />
+<link rel="icon" href="images/logo.jpg" sizes="32x32" />
 
 <link
 	href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap"
