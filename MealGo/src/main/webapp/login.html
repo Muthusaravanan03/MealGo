@@ -1,110 +1,106 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MealGo - Login</title>
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>MealGo - Login</title>
 
-    <link rel="stylesheet" href="auth.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap"
-      rel="stylesheet"
-    />
-  </head>
+<link rel="stylesheet" href="auth.css" />
+<link
+	href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap"
+	rel="stylesheet" />
+</head>
 
-  <body>
-    <!-- NAVBAR -->
-    <header class="navbar">
-      <a href="index.jsp" class="logo">🍔 MealGo</a>
+<body>
+	<!-- NAVBAR -->
+	<header class="navbar">
+		<a href="index.jsp" class="logo">🍔 MealGo</a>
 
-      <nav class="nav-links">
-        <a href="signup.html">Sign Up</a>
-      </nav>
+		<nav class="nav-links">
+			<a href="signup.html">Sign Up</a>
+		</nav>
 
-      <div class="menu-icon">☰</div>
-    </header>
+		<div class="menu-icon">☰</div>
+	</header>
 
-    <!-- LOGIN -->
-    <div class="auth-container">
-      <div class="auth-card">
-        <!-- Left Side Form -->
-        <div class="auth-box">
-          <h2>Welcome Back 👋</h2>
-          <p>Login to continue ordering delicious food</p>
+	<!-- LOGIN -->
+	<div class="auth-container">
+		<div class="auth-card">
+			<!-- Left Side Form -->
+			<div class="auth-box">
+				<h2>Welcome Back 👋</h2>
+				<p>Login to continue ordering delicious food</p>
 
-          <form>
-            <input type="text" placeholder="Username or Email" required />
-            <input type="password" placeholder="Password" required />
+				<form action="login" method="post">
 
-            <button type="submit">Login</button>
-          </form>
+					<input type="text" name="usernameOrEmail"
+						placeholder="Username or Email" required /> <input
+						type="password" name="password" placeholder="Password" required />
 
-          <div class="auth-link">
-            <h4 style="color: black">Don't have an account?</h4>
-            <a href="signup.html">Sign Up</a>
-          </div>
+					<button type="submit">Login</button>
 
-          <div class="divider">
-            <span>OR</span>
-          </div>
+				</form>
 
-          <div class="social-login">
-            <button type="button" class="google-btn">
-              <img src="images/google-logo.jpg" alt="Google" />
-              Continue with Google
-            </button>
-          </div>
-        </div>
+				<div class="auth-link">
+					<h4 style="color: black">Don't have an account?</h4>
+					<a href="signup.html">Sign Up</a>
+				</div>
 
-        <!-- Right Side Image -->
-        <div class="auth-image">
-          <img src="images/login-image.jpg" alt="Food Delivery" />
-        </div>
-      </div>
-    </div>
+				<div class="divider">
+					<span>OR</span>
+				</div>
 
-    <!-- ================= FOOTER ================= -->
-    <footer class="footer">
-      <div class="footer-container">
-        <!-- Brand -->
-        <div class="footer-box">
-          <h2>🍔 MealGo</h2>
-          <p>
-            Delicious food delivered fast at your doorstep. Order from your
-            favorite restaurants anytime.
-          </p>
-        </div>
+				<div class="social-login">
+					<button type="button" class="google-btn">
+						<img src="images/google-logo.jpg" alt="Google" /> Continue with
+						Google
+					</button>
+				</div>
+			</div>
 
-        <!-- Quick Links -->
-        <div class="footer-box">
-          <h3>Quick Links</h3>
-          <a href="index.jsp">Home</a>
-          <a href="#menu-section">Menu</a>
-          <a href="restaurants.jsp">Restaurants</a>
-          <a href="login.html">Login</a>
-          <a href="signup.html">Sign Up</a>
-        </div>
+			<!-- Right Side Image -->
+			<div class="auth-image">
+				<img src="images/login-image.jpg" alt="Food Delivery" />
+			</div>
+		</div>
+	</div>
 
-        <!-- Contact -->
-        <div class="footer-box">
-          <h3>Contact</h3>
-          <p>📍 Bangalore, India</p>
-          <p>📞 +91 98765 43210</p>
-          <p>✉️ support@mealgo.com</p>
-        </div>
+	<!-- ================= FOOTER ================= -->
+	<footer class="footer">
+		<div class="footer-container">
+			<!-- Brand -->
+			<div class="footer-box">
+				<h2>🍔 MealGo</h2>
+				<p>Delicious food delivered fast at your doorstep. Order from
+					your favorite restaurants anytime.</p>
+			</div>
 
-        <!-- Social -->
-        <div class="footer-box">
-          <h3>Follow Us</h3>
-          <a href="#">Instagram</a>
-          <a href="#">Facebook</a>
-          <a href="#">Twitter</a>
-        </div>
-      </div>
+			<!-- Quick Links -->
+			<div class="footer-box">
+				<h3>Quick Links</h3>
+				<a href="index.jsp">Home</a> <a href="#menu-section">Menu</a> <a
+					href="restaurants.jsp">Restaurants</a> <a href="login.html">Login</a>
+				<a href="signup.html">Sign Up</a>
+			</div>
 
-      <div class="footer-bottom">
-        <p>© 2026 MealGo. All rights reserved.</p>
-      </div>
-    </footer>
-  </body>
+			<!-- Contact -->
+			<div class="footer-box">
+				<h3>Contact</h3>
+				<p>📍 Bangalore, India</p>
+				<p>📞 +91 98765 43210</p>
+				<p>✉️ support@mealgo.com</p>
+			</div>
+
+			<!-- Social -->
+			<div class="footer-box">
+				<h3>Follow Us</h3>
+				<a href="#">Instagram</a> <a href="#">Facebook</a> <a href="#">Twitter</a>
+			</div>
+		</div>
+
+		<div class="footer-bottom">
+			<p>© 2026 MealGo. All rights reserved.</p>
+		</div>
+	</footer>
+</body>
 </html>

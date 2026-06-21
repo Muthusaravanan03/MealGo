@@ -15,7 +15,7 @@
 <link
 	href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap"
 	rel="stylesheet" />
-	
+
 <link rel="icon" href="images/logo.jpg" sizes="32x32" />
 </head>
 
@@ -98,9 +98,9 @@
 						style="color:<%=restaurant.isActive() ? "green" : "red"%>; font-weight:600;">
 							<%=restaurant.isActive() ? "OPEN" : "CLOSED"%>
 					</span>
-					</small>
-					<button>View Menu</button>
-
+					</small> <a class="view-btn"
+						href="restaurantMenu?restaurantId=<%=restaurant.getRestaurantId()%>">
+						View Menu </a>
 				</div>
 
 			</div>

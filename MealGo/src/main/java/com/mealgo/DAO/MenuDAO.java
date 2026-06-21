@@ -17,4 +17,6 @@ public interface MenuDAO {
     List<Menu> getAllMenus();
 
     List<Menu> getTop10Menus();   // Added this method
+    
+    public List<Menu> getMenuByRestaurantId(int restaurantId);
 }

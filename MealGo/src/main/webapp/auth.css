@@ -393,3 +393,24 @@ body {
   padding: 0 16px;
   background: #ffffff;
 }
+
+
+.auth-box select {
+  width: 100%;
+  padding: 13px;
+  margin-bottom: 15px;
+
+  border: 1px solid #ddd;
+  border-radius: 10px;
+
+  outline: none;
+  font-size: 14px;
+
+  background: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.auth-box select:focus {
+  border-color: #e7180b;
+}

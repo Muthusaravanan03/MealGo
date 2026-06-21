@@ -130,11 +130,4 @@ public class User {
 				+ ", address=" + address + ", role=" + role + ", createDate=" + createDate + ", lastLoginDate="
 				+ lastLoginDate + "]";
 	}
-	
-	
-
-	
-	
-	
-
 }

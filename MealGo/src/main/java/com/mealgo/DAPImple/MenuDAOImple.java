@@ -32,6 +32,9 @@ public class MenuDAOImple implements MenuDAO {
 	
 	private static final String SELECT_TOP10_MENUS_QUERY =
 	        "SELECT * FROM menu LIMIT 10";
+	
+	private static final String SELECT_BY_RESTAURANT =
+	        "SELECT * FROM menu WHERE restaurantId = ?";
 
 	@Override
 	public void addMenu(Menu menu) {
@@ -256,5 +259,48 @@ public class MenuDAOImple implements MenuDAO {
 	    }
 
 	    return al;
+	}
+	
+	
+	@Override
+	public List<Menu> getMenuByRestaurantId(int restaurantId) {
+
+	    Connection con = DBConnection.getConnection();
+
+	    List<Menu> list = new ArrayList<>();
+
+	    try {
+
+	        PreparedStatement pstmt =
+	                con.prepareStatement(SELECT_BY_RESTAURANT);
+
+	        pstmt.setInt(1, restaurantId);
+
+	        ResultSet res = pstmt.executeQuery();
+
+	        while (res.next()) {
+
+	            Menu menu = new Menu(
+	                    res.getInt("menuId"),
+	                    res.getInt("restaurantId"),
+	                    res.getString("itemName"),
+	                    res.getString("description"),
+	                    res.getDouble("price"),
+	                    res.getBoolean("isAvailable"),
+	                    res.getString("category"),
+	                    res.getString("imageUrl"),
+	                    res.getTimestamp("createdDate"),
+	                    res.getTimestamp("updatedDate"),
+	                    res.getTimestamp("deletedDate")
+	            );
+
+	            list.add(menu);
+	        }
+
+	    } catch (Exception e) {
+	        e.printStackTrace();
+	    }
+
+	    return list;
 	}
 }

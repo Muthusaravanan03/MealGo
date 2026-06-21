@@ -93,7 +93,19 @@
 
 					<h3><%=menu.getItemName()%></h3>
 
-					<p class="description"><%=menu.getDescription()%></p>
+					<p class="description" id="desc<%=menu.getMenuId()%>">
+						<%=menu.getDescription()%>
+					</p>
+
+					<%
+					if (menu.getDescription().length() > 60) {
+					%>
+					<span class="read-more"
+						onclick="toggleDesc('desc<%=menu.getMenuId()%>', this)">
+						Read More </span>
+					<%
+					}
+					%>
 
 					<p class="category">
 						🍴
@@ -165,6 +177,21 @@
 	<script>
 		function toggleMenu() {
 			document.querySelector(".nav-links").classList.toggle("active");
+		}
+	</script>
+
+	<script>
+		function toggleDesc(id, btn) {
+
+			const desc = document.getElementById(id);
+
+			if (desc.style.webkitLineClamp === "unset") {
+				desc.style.webkitLineClamp = "2";
+				btn.innerText = "Read More";
+			} else {
+				desc.style.webkitLineClamp = "unset";
+				btn.innerText = "Read Less";
+			}
 		}
 	</script>
 

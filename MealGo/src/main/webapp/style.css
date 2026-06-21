@@ -858,3 +858,57 @@ body {
     border-radius: 20px 20px 0 0;
   }
 }
+
+
+/* ================= USER PROFILE (AFTER LOGIN) ================= */
+.user-profile {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	padding: 6px 12px;
+
+	background: rgba(255, 255, 255, 0.2);
+	border-radius: 25px;
+
+	backdrop-filter: blur(10px);
+	-webkit-backdrop-filter: blur(10px);
+
+	transition: 0.3s ease;
+}
+
+.user-profile:hover {
+	background: rgba(255, 255, 255, 0.3);
+}
+
+/* PROFILE IMAGE */
+.profile-img {
+	width: 32px;
+	height: 32px;
+	border-radius: 50%;
+	object-fit: cover;
+	border: 2px solid white;
+}
+
+/* USERNAME */
+.user-profile span {
+	font-size: 14px;
+	font-weight: 700;
+	color: #222;
+	letter-spacing: 0.3px;
+}
+
+/* LOGOUT LINK */
+.user-profile a {
+	font-size: 13px;
+	font-weight: 600;
+	color: #e7180b;
+	text-decoration: none !important;
+	padding-left: 6px;
+	transition: 0.2s ease;
+}
+
+/* NO UNDERLINE ON HOVER */
+.user-profile a:hover {
+	color: #c51409;
+	text-decoration: none !important;
+}

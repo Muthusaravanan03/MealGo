@@ -7,6 +7,10 @@
 <%@ page import="com.mealgo.Model.Restaurant"%>
 <%@ page import="com.mealgo.DAPImple.RestaurantDAOImple"%>
 
+<%
+com.mealgo.Model.User user = (com.mealgo.Model.User) session.getAttribute("user");
+%>
+
 
 <!doctype html>
 <html lang="en">
@@ -32,8 +36,25 @@
 
 		<nav class="nav-links">
 			<a href="#">Home</a> <a href="callRestaurantServlet">Restaurants</a>
-			<a href="callMenuServlet">Menu</a> <a href="#">Orders</a> <a
-				href="login.html">Login</a> <a href="signup.html">Sign Up</a>
+			<a href="callMenuServlet">Menu</a> <a href="#">Orders</a>
+			<%
+			if (user == null) {
+			%>
+
+			<a href="login.html">Login</a> <a href="signup.html">Sign Up</a>
+
+			<%
+			} else {
+			%>
+
+			<div class="user-profile">
+				<img src="images/profile.jpg" class="profile-img" />
+				<a href="logout">Logout</a>
+			</div>
+
+			<%
+			}
+			%>
 		</nav>
 	</header>
 
