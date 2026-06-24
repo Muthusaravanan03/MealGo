@@ -7,9 +7,7 @@
 <%@ page import="com.mealgo.Model.Restaurant"%>
 <%@ page import="com.mealgo.DAPImple.RestaurantDAOImple"%>
 
-<%
-com.mealgo.Model.User user = (com.mealgo.Model.User) session.getAttribute("user");
-%>
+
 
 
 <!doctype html>
@@ -28,36 +26,9 @@ com.mealgo.Model.User user = (com.mealgo.Model.User) session.getAttribute("user"
 <link rel="icon" href="images/logo.jpg" sizes="32x32" />
 </head>
 <body>
-	<!-- Navbar -->
-	<header class="navbar">
-		<a href="index.jsp" class="logo">🍔 MealGo</a>
 
-		<div class="menu-icon" onclick="toggleMenu()">☰</div>
-
-		<nav class="nav-links">
-			<a href="#">Home</a> <a href="callRestaurantServlet">Restaurants</a>
-			<a href="callMenuServlet">Menu</a> <a href="#">Orders</a>
-			<%
-			if (user == null) {
-			%>
-
-			<a href="login.html">Login</a> <a href="signup.html">Sign Up</a>
-
-			<%
-			} else {
-			%>
-
-			<div class="user-profile">
-				<img src="images/profile.jpg" class="profile-img" />
-				<a href="logout">Logout</a>
-			</div>
-
-			<%
-			}
-			%>
-		</nav>
-	</header>
-
+	 <jsp:include page="navbar.jsp" />
+	 
 	<section class="hero">
 		<div class="hero-content">
 			<div class="search-bar">
@@ -91,7 +62,7 @@ com.mealgo.Model.User user = (com.mealgo.Model.User) session.getAttribute("user"
 			<%
 			com.mealgo.DAPImple.MenuDAOImple menudao = new com.mealgo.DAPImple.MenuDAOImple();
 
-			java.util.List<com.mealgo.Model.Menu> menuList = menudao.getAllMenus();
+			java.util.List<com.mealgo.Model.Menu> menuList = menudao.getTop10Menus();
 			%>
 
 			<%
@@ -121,8 +92,8 @@ com.mealgo.Model.User user = (com.mealgo.Model.User) session.getAttribute("user"
 						</span>
 					</div>
 
-					<button class="btn">Add to Cart</button>
-
+					<a href="cart?action=add&menuId=<%=menu.getMenuId()%>"
+						class="add-cart-btn"> Add to Cart </a>
 				</div>
 
 			</div>

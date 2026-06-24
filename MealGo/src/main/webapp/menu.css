@@ -292,25 +292,26 @@ body {
 	display: block;
 }
 
-/* BUTTON */
-.menu-content button {
+.add-cart-btn {
+	display: block;
 	margin-top: auto;
 	width: 100%;
 	padding: 9px;
-	border: none;
 	border-radius: 8px;
 	background: #e7180b;
 	color: white;
 	font-weight: 600;
 	font-size: 13px;
+	text-align: center;
+	text-decoration: none;
 	cursor: pointer;
 	transition: 0.2s ease;
+	box-sizing: border-box;
 }
 
-.menu-content button:hover {
+.add-cart-btn:hover {
 	background: #c51409;
 }
-
 /* ================= MOBILE ================= */
 @media ( max-width : 768px) {
 	.menu-section {
