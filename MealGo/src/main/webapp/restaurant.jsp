@@ -21,17 +21,7 @@
 
 <body>
 	<!-- ================= NAVBAR ================= -->
-	<header class="navbar">
-		<a href="index.jsp" class="logo">🍔 MealGo</a>
-
-		<div class="menu-icon" onclick="toggleMenu()">☰</div>
-
-		<nav class="nav-links">
-			<a href="index.jsp">Home</a> <a href="callRestaurantServlet">Restaurants</a>
-			<a href="callMenuServlet">Menu</a> <a href="#">Orders</a> <a
-				href="login.html">Login</a> <a href="signup.html">Sign Up</a>
-		</nav>
-	</header>
+	<jsp:include page="navbar.jsp" />
 
 	<!-- ================= HERO SECTION ================= -->
 	<section class="restaurant-hero">
