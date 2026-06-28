@@ -149,9 +149,10 @@ public class UserDAOImple implements UserDAO {
 		Connection con = DBConnection.getConnection();
 		User user = null;
 
-		String query = "SELECT userId FROM user WHERE (email=? OR userName=?) AND password=?";
+		String query = "SELECT * FROM user WHERE (email=? OR userName=?) AND password=?";
 
 		try {
+
 			PreparedStatement pstmt = con.prepareStatement(query);
 
 			pstmt.setString(1, input);
@@ -161,11 +162,20 @@ public class UserDAOImple implements UserDAO {
 			ResultSet res = pstmt.executeQuery();
 
 			if (res.next()) {
-				user = new User(); 
+
+				user = new User();
+
 				user.setUserId(res.getInt("userId"));
+				user.setUserName(res.getString("userName"));
+				user.setPassword(res.getString("password"));
+				user.setEmail(res.getString("email"));
+				user.setAddress(res.getString("address"));
+				user.setRole(res.getString("role"));
+				user.setCreateDate(res.getTimestamp("createDate"));
+				user.setLastLoginDate(res.getTimestamp("lastLoginDate"));
 			}
 
-		} catch (Exception e) {
+		} catch (SQLException e) {
 			e.printStackTrace();
 		}
 

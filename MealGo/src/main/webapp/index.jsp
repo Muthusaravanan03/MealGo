@@ -27,8 +27,8 @@
 </head>
 <body>
 
-	 <jsp:include page="navbar.jsp" />
-	 
+	<jsp:include page="navbar.jsp" />
+
 	<section class="hero">
 		<div class="hero-content">
 			<div class="search-bar">
@@ -219,5 +219,10 @@
 			<p>© 2026 MealGo. All rights reserved.</p>
 		</div>
 	</footer>
+
+	<a href="cart?action=viewCart" class="floating-cart"> <img
+		src="images/imagesection/Cart-Icon.png" alt="Cart">
+
+	</a>
 </body>
 </html>

@@ -148,5 +148,9 @@
 			document.querySelector(".nav-links").classList.toggle("active");
 		}
 	</script>
+
+	<a href="cart?action=viewCart" class="floating-cart"> <img
+		src="images/imagesection/Cart-Icon.png" alt="Cart">
+	</a>
 </body>
 </html>

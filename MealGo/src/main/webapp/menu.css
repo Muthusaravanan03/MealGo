@@ -503,3 +503,48 @@ body {
 		width: 100%;
 	}
 }
+
+
+
+.floating-cart{
+
+    position:fixed;
+
+    bottom:30px;
+
+    right:30px;
+
+    width:70px;
+
+    height:70px;
+
+    border-radius:50%;
+
+    background:#fff;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    box-shadow:0 8px 25px rgba(0,0,0,.25);
+
+    z-index:9999;
+
+    transition:.3s;
+}
+
+.floating-cart img{
+
+    width:38px;
+
+    height:38px;
+}
+
+.floating-cart:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 15px 35px rgba(0,0,0,.35);
+}
